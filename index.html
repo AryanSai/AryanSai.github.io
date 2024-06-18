@@ -1,118 +1,362 @@
 <!DOCTYPE html>
-<html>
-<title>Aryan Sai Arvapelly</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aryan Sai</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+      }
+      header {
+        background: #000000;
+        color: #fff;
+        padding: 2em 0;
+        text-align: center;
+      }
 
-<body class="w3-black">
-  <!--Sidebar-->
-  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-      <i class="fa fa-home w3-xxlarge"></i>
-      <p>Home</p>
-    </a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-user w3-xxlarge"></i>
-      <p>About</p>
-    </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-eye w3-xxlarge"></i>
-      <p>Photos</p>
-    </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-envelope w3-xxlarge"></i>
-      <p>Contact</p>
-    </a>
-  </nav>
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
 
-  <!-- Navbar on small screens (Hidden on medium and large screens) -->
-  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-      <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-      <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-    </div>
-  </div>
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
 
-  <!-- Page Content -->
-  <div class="w3-padding-large" id="main">
-    <!-- Header/Home -->
-    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-      <h1 class="w3-jumbo">Hello World!</h1>
-      <h1 class="w3-jumbo">I am Aryan Sai Arvapelly</h1>
-      <p>Application Developer</p>
+      .header-text {
+        text-align: left;
+      }
+
+      .header-text h1 {
+        margin-top: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background: #313131;
+        padding: 0.5em 0;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 1em;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      section {
+        padding: 2em 0;
+        border-bottom: 1px solid #ccc;
+      }
+      .card {
+        background: #fff;
+        margin: 1em 0;
+        padding: 1em;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        text-decoration: none;
+        color: inherit;
+      }
+      .card h3 {
+        margin-top: 0;
+      }
+      .card a {
+        color: #0077b5;
+        text-decoration: none;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        padding: 1em 0;
+        background: #000000;
+        color: #fff;
+      }
+      .socials a {
+        color: #333;
+        margin: 0 1em;
+        font-size: 1.5em;
+        text-decoration: none;
+      }
+      .socials a:hover {
+        color: #0077b5;
+      }
+      .socials a.github:hover {
+        color: #000;
+      }
+      .socials a.twitter:hover {
+        color: #1da1f2;
+      }
+      .socials a.email:hover {
+        color: #ea4335;
+      }
+      .socials a.whatsapp:hover {
+        color: #25d366;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="IMG.JPG" alt="Your Name" class="profile-pic" />
+        <div class="header-text">
+          <h1>Arvapelly Aryan Sai</h1>
+          <p>Welcome to My Personal Webpage!</p>
+        </div>
+      </div>
     </header>
 
-    <!-- About Section -->
-    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-
-      <h2>About</h2>
-      <hr class="w3-opacity">
-      <p>
-        I wrote my first "Hello, World!" program at the age of 16. In my 12th class, I had built a network application called eXam for conducting MCQ-based tests, which is successfully deployed at my alma mater, Sri Sathya Sai Higher Secondary School. 
-        <br>
-        <br>
-        Deploying my mathematical acumen, I went on to obtain both a B.Sc. and M.Sc. in Mathematics, with a specialisation in Computer Science, from Sri Sathya Sai Institute of Higher Learning. 
-        <br>
-        <br>
-        Specially intrigued by the idea of a Blockchain, I built BlogChain, a Write-to-Earn decentralised application. With BlogChain, I sought to empower writers, offering them a platform where their words could not only inspire but also earn.
-        <br>
-        <br>
-        Currently, I am on my final(hopefully!) pursuit to earn my Masters in Technology in Computer Science at Sri Sathya Sai Institute of Higher Learning.
-        <br>
-        <br>
-        I don’t know if I am a master, but I am a jack of all trades. I’m a drummer in the University Brass Band, an actor, an orator, a debater, and also an artist.
-        <br>
-        <br>
-        I am ready to trade my time with people willing to create an impact in the world!
-      </p>
-    </div>
-
-    <!-- Portfolio Section -->
-    <div class="w3-padding-64 w3-content" id="photos">
-      <h2 class="w3-text-light-grey">My Photos</h2>
-      <hr style="width:200px" class="w3-opacity">
-
-      <!-- Grid for photos -->
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half">
-          <img src="/w3images/wedding.jpg" style="width:100%">
-          <img src="/w3images/rocks.jpg" style="width:100%">
-          <img src="/w3images/sailboat.jpg" style="width:100%">
-        </div>
-        <!-- End photo grid -->
-      </div>
-      <!-- End Portfolio Section -->
-    </div>
-
-    <!-- Contact Section -->
-    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-      <h2 class="w3-text-light-grey">Contact Me</h2>
-      <hr style="width:200px" class="w3-opacity">
-
-      <div class="w3-section">
-        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Prashanti Nilayam, Sri Sathya
-          Sai District, Andhra Pradesh, India 🇮🇳</p>
-        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> +91 90305 97199</p>
-        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> aryansaiarvapelly@gmail.com
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#experience">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#pub">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I wrote my first "Hello, World!" program at the age of 16. In my 12th
+          class, I had built a network application called eXam for conducting
+          MCQ-based tests, which is successfully deployed at my alma mater, Sri
+          Sathya Sai Higher Secondary School.
+          <br />
+          <br />
+          Deploying my mathematical acumen, I went on to obtain both a B.Sc. and
+          M.Sc. in Mathematics, with a specialisation in Computer Science, from
+          Sri Sathya Sai Institute of Higher Learning.
+          <br />
+          <br />
+          Specially intrigued by the idea of a Blockchain, I built BlogChain, a
+          Write-to-Earn decentralised application. With BlogChain, I sought to
+          empower writers, offering them a platform where their words could not
+          only inspire but also earn.
+          <br />
+          <br />
+          Currently, I am on my final(hopefully!) pursuit to earn my Masters in
+          Technology in Computer Science at Sri Sathya Sai Institute of Higher
+          Learning.
+          <br />
+          <br />
+          I don’t know if I am a master, but I am a jack of all trades. I’m a
+          drummer in the University Brass Band, an actor, an orator, a debater,
+          and also an artist.
+          <br />
+          <br />
+          I am ready to trade my time with people willing to create an impact in
+          the world!
         </p>
-      </div>
+      </section>
+
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="card">
+          <h3>Assocsiate Software Developer Intern</h3>
+          <p>Citridot Solutions Private Limited, Hyderabad</p>
+          <!-- <p>
+            Description of your role, responsibilities, and achievements at
+            Company 1.
+          </p> -->
+        </div>
+        <div class="card">
+          <h3>Web Developer Intern</h3>
+          <p>Sri Sathya Sai Vidya Vahini, Prashanti Nilayam</p>
+          <!-- <p>
+            Description of your role, responsibilities, and achievements at
+            Company 2.
+          </p> -->
+        </div>
+        <!-- <div class="card">
+          <h3>Job Title at Company 3</h3>
+          <p>Dates of Employment</p>
+          <p>
+            Description of your role, responsibilities, and achievements at
+            Company 3.
+          </p>
+        </div> -->
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+          <h3>BlogChain - A Decentralised Blogging Platform</h3>
+          <p>
+            This work proposes a Write-to-Earn decentralised application called
+            BlogChain to create aligned incentives for both writers and readers.
+            The decentralised nature of blockchain technology provides a secure
+            and transparent platform. Writers can publish their work and receive
+            rewards for their efforts. The use of BlogChain NFTs provides a
+            mechanism for writers to prove ownership of their work. It enables
+            readers to support their favourite writers through tipping. The use
+            of a native BLOG cryptocurrency creates an ecosystem for the growth
+            of readers and writers.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1L4olYzLllUQlov0KoZaCj9Gv4yu05liq/view"
+            >Link to the Publication</a
+          >
+        </div>
+        <div class="card">
+          <h3>Blockchain-based solution for Trade Lifecycle Management</h3>
+          <p>
+            The trade life cycle is a complex process involving multiple parties
+            and systems, resulting in a high risk of errors and
+            inefficiencies.This work proposes a blockchain-based solution for
+            trade lifecycle management, aimed at enhancing transparency,
+            accountability, and efficiency in trade operations in an investment
+            bank. <br />The proposed system utilizes a decentralized ledger on a
+            private blockchain to store and manage trade data. It provides a
+            single source of truth to all parties involved in the trade inside
+            the bank. The system leverages smart contracts to automate trade
+            validation.
+          </p>
+          <a href="https://github.com/AryanSai/JamesBond"
+            >Link to GitHub Repo</a
+          >
+        </div>
+        <div class="card">
+          <h3>Talk to Swami - An Android Application</h3>
+          <p>
+            During the COVID lockdown in 2020, I built an Android application
+            called "Talk to Swami." It is a random quote generator application
+            inspired by the teachings of Bhagwan Sri Sathya Sai Baba, drawing
+            inspiration from the chit boxes used in Sathya Sai Hostels. What
+            began as a fun side project soon blossomed into a full-fledged
+            application.
+            <br />
+            <br />
+            I am proud to share that "Talk to Swami" has garnered over 10,000
+            installations and achieved an impressive rating of 4.9 on the Google
+            Play Store.
+            <br /><br />
+            Through "Talk to Swami," individuals have the opportunity to receive
+            insightful quotes that promote spiritual growth and inner
+            transformation. By incorporating the teachings of Bhagwan Sri Sathya
+            Sai Baba, this application aims to guide the users on their personal
+            journeys.
+          </p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.gmail.aryanias3.talktoswamicopy&hl=en_IN&gl=US"
+            >Link to the app on Google Play Store</a
+          >
+        </div>
+        <div class="card">
+          <h3>Talk to Swami - Google Chrome Extension</h3>
+          <p>
+            The Chrome extension counterpart of my Android app, 'Talk to Swami'.
+          </p>
+          <a
+            href="https://chromewebstore.google.com/detail/talk-to-swami/jjpebaigoamlglpipgcfhaedhckgjcmj"
+            >Link to Google Chrome Web Store</a
+          >
+        </div>
+        <div class="card">
+          <h3>eXam</h3>
+          <p>
+            During my 12th class, I had the opportunity to develop this
+            application named eXam as part of my Informatics course. This
+            application, built in Java and MySQL, was specifically designed to
+            facilitate the smooth administration of MCQ-based tests within a
+            local network.
+            <br />A major highlight of this project is its successful deployment
+            in Sri Sathya Sai Higher Secondary School, where it is currently in
+            active use. Witnessing the application's practical implementation in
+            a real educational environment has been immensely rewarding.
+          </p>
+          <a href="https://github.com/AryanSai/eXam">Link to GitHub Repo</a>
+        </div>
+      </section>
+      <section id="education">
+        <h2>Educational Qualifications</h2>
+        <div class="card">
+          <h3>Master of Technology in Computer Science</h3>
+          <p>Sri Sathya Sai Institute of Higher Learning</p>
+          <p>2025</p>
+          <!-- <p>
+            Description of the course, key subjects, and any notable
+            achievements.
+          </p> -->
+        </div>
+        <div class="card">
+          <h3>
+            Master of Science in Mathematics (With specialisation in Computer
+            Science)
+          </h3>
+          <p>Sri Sathya Sai Institute of Higher Learning</p>
+          <p>2023</p>
+          <!-- <p>
+            Description of the course, key subjects, and any notable
+            achievements.
+          </p> -->
+        </div>
+        <div class="card">
+          <h3>Bachelor of Science Mathematics</h3>
+          <p>Sri Sathya Sai Institute of Higher Learning</p>
+          <p>2021</p>
+          <!-- <p>
+            Description of the course, key subjects, and any notable
+            achievements.
+          </p> -->
+        </div>
+      </section>
+      <section id="pub">
+        <h2>Publications</h2>
+        <div class="card">
+          <h3>Degree Title</h3>
+          <p>Institution Name</p>
+          <p>Year of Graduation</p>
+          <p>
+            Description of the course, key subjects, and any notable
+            achievements.
+          </p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="socials">
+          <a href="mailto:aryansaiarvapelly@gmail.com" class="email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="https://wa.me/9030597199" class="whatsapp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/aryan-sai-arvapelly/"
+            class="linkedin"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/AryanSai" class="github"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </section>
     </div>
-
-    <!-- Footer -->
-    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <footer>
+      <p>&copy; 2024 Arvapelly Aryan Sai | All rights reserved.</p>
     </footer>
-  </div>
-
-</body>
-
+  </body>
 </html>
